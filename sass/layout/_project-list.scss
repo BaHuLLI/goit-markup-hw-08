@@ -1,0 +1,92 @@
+/* Project list */
+.projects__list {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.projects__items {
+@extend %reset-list;
+  transition: box-shadow 250ms var(--cubic);
+  -webkit-transition: box-shadow 250ms var(--cubic);
+  -moz-transition: box-shadow 250ms var(--cubic);
+  -ms-transition: box-shadow 250ms var(--cubic);
+  -o-transition: box-shadow 250ms var(--cubic);
+
+&:hover {
+  border-color: transparent;
+  color: #ffffff;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+}
+}
+
+.projects__overlay {
+  position: relative;
+  overflow: hidden;
+
+&-text {
+  font-weight: 400;
+  text-align: center;
+  font-size: 18px;
+  line-height: calc(28 / 18);
+  letter-spacing: 0.03em;
+  color: #ffffff;
+}
+}
+
+.projects__photo {
+  @extend %reset-link;
+  display: block;
+}
+
+.projects__cards {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: calc(36 / 18);
+  letter-spacing: 0.06em;
+  color: var(--main-text-color);
+
+&-list {
+  font-size: 16px;
+  text-align: left;
+  line-height: calc(30 / 16);
+  letter-spacing: 0.03em;
+  color: var(--second-text-color);
+}
+}
+
+.projects_overlay-filter {
+  position: absolute;
+  opacity: 1;
+  transform: translateY(100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 250ms var(--cubic);
+  background-color: rgba(33, 150, 243, 0.9);
+  -webkit-transform: translateY(100%);
+  -moz-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  -o-transform: translateY(100%);
+  -webkit-transition: transform 250ms var(--cubic);
+  -moz-transition: transform 250ms var(--cubic);
+  -ms-transition: transform 250ms var(--cubic);
+  -o-transition: transform 250ms var(--cubic);
+
+
+}
+.projects__items:hover .projects_overlay-filter {
+  transform: translateY(0%);
+  opacity: 1;
+}

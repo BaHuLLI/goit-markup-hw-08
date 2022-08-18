@@ -1,0 +1,198 @@
+
+.form
+{
+&__group {
+  margin-bottom: 20px;
+}
+
+&__title {
+  display: block;
+  margin-bottom: 30px;
+  font-size: 20px;
+  line-height: calc(23 / 20);
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--main-text-color);
+}
+
+&__label {
+  position: relative;
+  display: block;
+  margin-bottom: 10px;
+}
+
+&__label:last-child {
+  margin-bottom: 0px;
+}
+
+&__name {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  letter-spacing: 0.01em;
+  color: var(--second-text-color);
+}
+
+&__input {
+  outline: transparent;
+  position: relative;
+  transition: border-color 250ms var(--cubic);
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding-left: 35px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: calc(24 / 14);
+  letter-spacing: 0.03em;
+  color: var(--second-text-color);
+  -webkit-transition: border-color 250ms var(--cubic);
+  -moz-transition: border-color 250ms var(--cubic);
+  -ms-transition: border-color 250ms var(--cubic);
+  -o-transition: border-color 250ms var(--cubic);
+}
+
+&__input:hover,
+&__input:focus {
+  border-color: var(--accent-color);
+}
+
+&__input:hover + &__icon,
+&__input:focus + &__icon {
+  fill: var(--accent-color);
+}
+
+&__area {
+  outline: transparent;
+  width: 100%;
+  height: 120px;
+  transition: border-color 250ms var(--cubic);
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  resize: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: calc(14 / 12);
+  letter-spacing: 0.01em;
+  color: var(--second-text-color);
+  -webkit-transition: border-color 250ms var(--cubic);
+  -moz-transition: border-color 250ms var(--cubic);
+  -ms-transition: border-color 250ms var(--cubic);
+  -o-transition: border-color 250ms var(--cubic);
+}
+
+&__area::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+&__area:hover,
+&__area:focus {
+  border-color: var(--accent-color);
+}
+
+&__agreement {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+&__agreement-icon {
+  width: 16px;
+  height: 15px;
+}
+
+&__checkbox:checked + &__agreement-icon &__nocheck {
+  opacity: 0;
+  transition: opacity 250ms var(--cubic);
+  -webkit-transition: opacity 250ms var(--cubic);
+  -moz-transition: opacity 250ms var(--cubic);
+  -ms-transition: opacity 250ms var(--cubic);
+  -o-transition: opacity 250ms var(--cubic);
+}
+
+&__check {
+  opacity: 0;
+  transition: opacity 250ms var(--cubic);
+  -webkit-transition: opacity 250ms var(--cubic);
+  -moz-transition: opacity 250ms var(--cubic);
+  -ms-transition: opacity 250ms var(--cubic);
+  -o-transition: opacity 250ms var(--cubic);
+}
+
+&__checkbox:checked + &__agreement-icon &__check {
+  opacity: 1;
+}
+
+&__icon {
+  position: absolute;
+  transition: fill 250ms var(--cubic);
+  left: 12px;
+  bottom: 11px;
+  width: 18px;
+  height: 18px;
+  -webkit-transition: fill 250ms var(--cubic);
+  -moz-transition: fill 250ms var(--cubic);
+  -ms-transition: fill 250ms var(--cubic);
+  -o-transition: fill 250ms var(--cubic);
+}
+
+
+&__info {
+  margin-left: 7px;
+  user-select: none;
+  font-size: 14px;
+  line-height: calc(24 / 14);
+  letter-spacing: 0.03em;
+  color: var(--second-text-color);
+}
+
+&__link {
+  text-underline-position: under;
+  font-size: 14px;
+  line-height: calc(24 / 14);
+  letter-spacing: 0.03em;
+  color: var(--accent-color);
+}
+
+&__button-submit {
+  transition: background-color 250ms var(--cubic);
+  display: block;
+  margin: 0 auto;
+  margin-top: 30px;
+  width: 200px;
+  height: 50px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: calc(30 / 16);
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  background-color: #2196f3;
+  border-color: transparent;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  -webkit-transition: background-color 250ms var(--cubic);
+  -moz-transition: background-color 250ms var(--cubic);
+  -ms-transition: background-color 250ms var(--cubic);
+  -o-transition: background-color 250ms var(--cubic);
+}
+
+&__button-submit:hover,
+&__button-submit:focus {
+  background-color: #188ce8;
+}
+
+}

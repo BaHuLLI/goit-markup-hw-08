@@ -1,0 +1,38 @@
+/* Feedback */
+
+.feedback {
+  display: flex;
+
+  &__items {
+    @extend %reset-list;
+    margin-left: 50px;
+    margin-right: 25px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: calc(16 / 14);
+    letter-spacing: 0.02em;
+    margin-right: 0px;
+    color: var(--second-text-color);
+    display: none;
+  }
+
+  &__items :first-child {
+    margin-left: 0px;
+  }
+
+  &__items :hover,
+  &__items :focus {
+    color: var(--accent-color);
+  }
+
+  &__icons {
+    transition: fill 250ms var(--cubic);
+    margin-right: 10px;
+    display: block;
+  }
+
+  .navbar__link:hover &__icons,
+  .navbar__link:focus &__icons {
+    fill: var(--accent-color);
+  }
+}

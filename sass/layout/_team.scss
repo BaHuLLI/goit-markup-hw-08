@@ -1,0 +1,141 @@
+/* Team */
+.team {
+  @extend %section;
+  background-color: var(--bg-light-clr);
+
+  &__group {
+    @extend %container;
+  }
+
+  &__people {
+    margin-bottom: 30px;
+
+    font-size: 28px;
+    line-height: calc(33/28);
+    text-align: center;
+    letter-spacing: 0.03em;
+
+
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 50px;
+
+      font-size: 36px;
+      line-height: calc(42 / 36);
+
+    }
+  }
+
+  &__list {
+    @media screen and (min-width:768px) {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+
+      @media screen and (min-width:1200px) {
+        flex-wrap: nowrap;
+
+      }
+    }
+
+  }
+
+  &__items {
+    @extend %reset-list;
+    margin-bottom: 30px;
+    font-size: 16px;
+    line-height: calc(19 / 16);
+    letter-spacing: 0.03em;
+    color: var(--second-text-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+
+    @media screen and (min-width: 768px) {
+
+      margin-bottom: 0px;
+    }
+  }
+
+  &__items:last-child {
+    margin-bottom: 0px;
+  }
+
+  // &__items:first-child {
+  //   margin-left: 0px;
+  // }
+
+  &__activity {
+    background-color: #ffffff;
+    padding-bottom: 24px;
+    padding-top: 30px;
+    text-align: center;
+  }
+
+  &__name {
+
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: calc(19 / 16);
+    letter-spacing: 0.03em;
+    color: var(--main-text-color);
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: calc(19 / 16);
+    letter-spacing: 0.03em;
+
+    color: #757575;
+  }
+
+  &__social-list {
+    gap: 10px;
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__social-items {
+    @extend %reset-list;
+  }
+
+  &__social-link {
+    @extend %reset-link;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background-color: #ffffff;
+    border-radius: 50%;
+
+    @media screen and (min-width: 1200px) {
+      transition: background-color 250ms var(--cubic);
+    }
+
+  }
+
+  &__social-link:hover,
+  &__social-link:focus {
+    @media screen and (min-width: 1200px) {
+      background-color: var(--accent-color);
+    }
+
+  }
+
+  &__social-link:hover &__social-svg,
+  &__social-link:focus &__social-svg {
+    @media screen and (min-width: 1200px) {
+      fill: #ffffff;
+    }
+  }
+
+  &__social-svg {
+    width: 20px;
+    height: 20px;
+    fill: #afb1b8;
+  }
+}

@@ -1,0 +1,14 @@
+.header {
+  @extend %container;
+  width: 100%;
+  border-width: 1px;
+  border-bottom-style: solid;
+  border-color: #ececec;
+
+  &__content {
+    // @extend %container;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

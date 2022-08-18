@@ -1,0 +1,92 @@
+.clients {
+  @extend %section;
+
+  &__group {
+    @extend %container;
+  }
+
+  &__title {
+
+    margin-bottom: 30px;
+    font-size: 28px;
+    line-height: calc(33/28);
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--main-text-color);
+
+    @media screen and (min-width: 1200px) {
+      font-size: 36px;
+      line-height: 42px;
+      text-align: center;
+      letter-spacing: 0.03em;
+      margin-bottom: 50px;
+
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    @media screen and (min-width: 250px) and (max-width: 480px) {
+      justify-content: center;
+    }
+
+    @media screen and (min-width: 1200px) {
+      flex-wrap: nowrap;
+      align-items: center;
+
+    }
+  }
+
+  &__items {
+    @extend %reset-list;
+  }
+
+  &__logo {
+    @extend %reset-link;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 210px;
+
+    height: 92px;
+    border: 1px solid #afb1b8;
+    border-radius: 4px;
+
+
+
+
+    @media screen and (min-width: 768px) {
+      width: 226px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: 170px;
+      transition: border-color 250ms var(--cubic);
+    }
+  }
+
+  &__logo:hover,
+  &__logo:focus {
+    border-color: var(--accent-color);
+  }
+
+  &__logo:hover &__icon,
+  &__logo:focus &__icon {
+    fill: var(--accent-color);
+  }
+
+  &__icon {
+    width: 106px;
+    height: 60px;
+    fill: #afb1b8;
+    transition: fill 250ms var(--cubic);
+    -webkit-transition: fill 250ms var(--cubic);
+    -moz-transition: fill 250ms var(--cubic);
+    -ms-transition: fill 250ms var(--cubic);
+    -o-transition: fill 250ms var(--cubic);
+  }
+}
